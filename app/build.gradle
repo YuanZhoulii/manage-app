@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    //导入material包，为了使用里面的TabLayout 页面切换指示器
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+
+    //OkHttp是一个处理网络请求的开源项目,是安卓端最火热的轻量级框架
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+
+    //导入circleImageView 圆形图库
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //导入banner,轮播视图库
+    implementation 'com.ms:banner:1.0.0'
+
+    //图片加载 glide依赖
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    implementation 'org.projectlombok:lombok:1.18.18'
+    annotationProcessor 'org.projectlombok:lombok:1.18.18'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //导入textBannerView，文字轮播视图
+    implementation 'com.superluo:textbannerview:1.0.5'
+
+    // Gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。
+    // 可以将一个 Json 字符转成一个 Java 对象，或者将一个 Java 转化为 Json 字符串。
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'org.apache.commons:commons-lang3:3.11'
+    implementation 'com.github.medyo:android-about-page:1.3.1'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    //SmartRefreshLayout是一个智能的下拉刷新布局
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-header-radar:2.0.3'       //雷达刷新头
+    implementation 'com.scwang.smart:refresh-header-falsify:2.0.3'     //虚拟刷新头
+    implementation 'com.scwang.smart:refresh-header-material:2.0.3'    //谷歌刷新头
+    implementation 'com.scwang.smart:refresh-header-two-level:2.0.3'   //二级刷新头
+    implementation 'com.scwang.smart:refresh-footer-ball:2.0.3'        //球脉冲加载
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.3'
+
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'//经典加载
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
