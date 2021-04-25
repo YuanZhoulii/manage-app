@@ -24,7 +24,7 @@ public class HttpUtils {
             .proxy(Proxy.NO_PROXY)
             .connectTimeout(5,TimeUnit.SECONDS)
             .build();
-    public static String HOST = "http://192.168.43.81/";
+    public static String HOST = "http://10.189.66.144/";
 
     public static JSONObject send(String url, String data) throws Exception {
         FormBody.Builder body = new FormBody.Builder();
