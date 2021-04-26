@@ -1,0 +1,1 @@
+java -Dfile.encoding=utf-8 -jar server.jar --spring.config.location=application.yaml

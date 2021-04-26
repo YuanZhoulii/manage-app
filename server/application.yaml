@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3309/app?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    hikari:
+      idle-timeout: 60000
+      connection-timeout: 60000
+      validation-timeout: 3000
+      login-timeout: 5
+      max-lifetime: 60000
+  thymeleaf:
+    cache: false
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.puppet.app.pojo
